@@ -1,0 +1,83 @@
+*, *::before, *::after {
+
+    box-sizing: border-box;
+    font-family: Gothman Rounded, sans-serif;
+    font-weight:normal;
+}
+
+body {
+	padding: 0;
+	margin: 0px;
+	background:  green;
+
+}
+
+.cal {
+	display: grid;
+	justify-content: center;
+	align-content: : center;
+	min-height: 100vh;
+	grid-template-columns: repeat(4, 100px);
+	grid-template-rows: minmax(120px, auto) repeat(9,100px);
+
+
+  
+}
+.cal > button {
+	cursor: pointer;
+	font-size: 2rem;
+	border: 1px solid black;
+	outline: none;
+	background-color: light gray;
+
+}
+
+.operation{
+	background-color: orange;
+}
+
+.cal > button:hover {
+	background-color: rgba(255,255,255,.9); 
+}
+
+
+.zero {
+grid-column: span 3;
+
+}
+.c {
+grid-column: span 2;
+
+}
+
+.head1{
+	color:blue;
+	font-size: 74px;
+	font-style: italic;
+	
+
+}
+
+.output {
+	grid-column: 1 / -1;
+	background-color: black;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-around;
+	flex-direction: column;
+	padding: 10px;
+	word-wrap: break-word;
+	word-break: break-all;
+
+}
+
+.output .previous-operand {
+	color: rgba(255, 255, 255, .75);
+	font-size: 1.5rem;
+}
+
+.output .current-operand {
+	color: white;
+	font-size: 2.5rem;
+}
+
